@@ -6,12 +6,6 @@ interface baseAlien {
     hp: number;
 }
 
-enum type {
-    Regular = "Regular",
-    Elite = "Elite",
-    Boss = "Boss",
-}
-
 interface DetailedAlien {
     base_alien: baseAlien;
     first_name: string;
@@ -19,7 +13,7 @@ interface DetailedAlien {
     last_name: string;
     profile_url: string;
     spd: number;
-    type: type;
+    type: string;
 }
 
 
@@ -73,7 +67,7 @@ app.delete("/api/aliens", (req: Request, res: Response) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Alien API server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
 
 // // Get alien by ID
