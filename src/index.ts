@@ -6,6 +6,12 @@ interface baseAlien {
     hp: number;
 }
 
+enum AlienType {
+    Regular = "Regular",
+    Elite = "Elite",
+    Boss = "Boss",
+}
+
 interface DetailedAlien {
     base_alien: baseAlien;
     first_name: string;
@@ -13,7 +19,7 @@ interface DetailedAlien {
     last_name: string;
     profile_url: string;
     spd: number;
-    type: string;
+    type: AlienType;
 }
 
 
